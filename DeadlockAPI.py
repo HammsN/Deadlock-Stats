@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 
 # Small program to get total match history data
 
-def get_steamID():
+def get_steamID() -> int:
     try:
         account_id = int(input("Enter SteamID64: "))
         return account_id      
@@ -55,11 +55,12 @@ def fetch_stats(data):
     
     
 def main():
-    account_id = str(get_steamID())
+    account_id = get_steamID()
     history = get_response(account_id)
     fetch_stats(history)
     input()
 
-main()
+if __name__ == "__main__":
+    main()
     
 
