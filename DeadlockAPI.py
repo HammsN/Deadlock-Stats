@@ -11,7 +11,6 @@ def get_steamID() -> int:
         print("Invalid ID, try again")
         return get_steamID()
    
-   
 def get_response(id):
     url = f"https://api.deadlock-api.com/v1/players/{id}/match-history"
     response = requests.get(url)
